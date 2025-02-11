@@ -414,6 +414,25 @@
       <linkName>base_link</linkName>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
     </plugin>
+    <plugin filename="libgazebo_plugin__body_uav.so" name="body_uav_plugin">
+        <robot_namespace></robot_namespace>
+        <link_name>base_link</link_name>
+        <frame_id>world</frame_id>
+        <child_frame_id>base_link</child_frame_id>
+        <odom_freq>50</odom_freq>
+        <radial_symmetry>false</radial_symmetry>
+        <alpha_zero>0.0</alpha_zero>
+        <area>0.0809</area>
+        <lift_coef_zero>0.0</lift_coef_zero>
+        <drag_coef_zero>0.7</drag_coef_zero>
+        <moment_coef_zero>0.0</moment_coef_zero>
+        <alpha_stall>0.017</alpha_stall>
+        <lift_coef_stall>0.0</lift_coef_stall>
+        <drag_coef_stall>1.0</drag_coef_stall>
+        <moment_coef_stall>0.0</moment_coef_stall>
+        <center_of_pressure>0.0 0.0 0.0</center_of_pressure>
+        <chord_direction>0.0 1.0 0.0</chord_direction>
+    </plugin>
     <plugin name='front_right_motor_model' filename='libgazebo_motor_model.so'>
       <robotNamespace/>
       <jointName>rotor_0_joint</jointName>
